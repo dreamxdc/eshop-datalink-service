@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.25.64:8761/eureka/
+      
+server:
+  port: 8767
+  
+spring:
+  application:
+    name: eshop-datalink-service
