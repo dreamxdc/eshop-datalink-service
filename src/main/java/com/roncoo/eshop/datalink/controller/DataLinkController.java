@@ -44,9 +44,12 @@ public class DataLinkController {
 	    		jedis.set("dim_product_" + productId, productDataJSONObject.toJSONString());
 	    		
 	    		return productDataJSONObject.toJSONString();
+	    	}else {
+	    		return "";
 	    	}
+		}else {
+			return JSONObject.parseObject(dimProductJSON).toJSONString();
 		}
-		return "";
 		
 	}
 }
